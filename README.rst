@@ -40,24 +40,7 @@ To install ckanext-protected_resources:
    config file (by default the config file is located at
    ``/etc/ckan/default/production.ini``).
 
-
-4. Add the is_protected field to your schema::
-
-    {
-      "field_name": "is_protected",
-      "label": "Protected",
-      "help_text": "Should resource deletion be disabled?",
-      "help_inline": true,
-      "preset": "select",
-      "validators": "protected_sysadmin_only boolean_validator ignore_missing ",
-      "output_validators": "boolean_to_string",
-      "choices": [
-        {"value": "True", "label":"Protected from deletion"},
-        {"value": "False", "label":"Not protected from deletion"}
-      ]
-    }
-
-5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
+4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
 
      sudo service apache2 reload
 
